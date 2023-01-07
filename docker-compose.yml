@@ -8,7 +8,8 @@ services:
       EULA: "TRUE"      
       GAMEMODE: survival # survival, creative, adventure
       DIFFICULTY: peaceful # peaceful, easy, normal hard
-      ALLOW_CHEATS: false # true, false
+      ALLOW_CHEATS: "true" # true, false
+      SERVER_NAME: "Peaceful Server"
     ports:
       - 19132:19132/udp
     volumes:
