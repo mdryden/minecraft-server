@@ -1,0 +1,22 @@
+version: "3.4"
+
+services:
+  home-peaceful:
+    image: itzg/minecraft-bedrock-server
+    environment:
+      # https://minecraft.fandom.com/wiki/Server.properties#Bedrock_Edition_3
+      EULA: "TRUE"      
+      GAMEMODE: survival # survival, creative, adventure
+      DIFFICULTY: peaceful # peaceful, easy, normal hard
+      ALLOW_CHEATS: false # true, false
+    ports:
+      - 19132:19132/udp
+    volumes:
+      - ./data/peaceful1:/data
+    tty: true
+    stdin_open: true
+    restart: unless-stopped
+
+
+# volumes:
+#   mc: {}
